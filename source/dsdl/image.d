@@ -41,15 +41,21 @@ else {
             return;
         }
 
-        Version wanted = Version(sdlImageSupport);
-        if (current == SDLImageSupport.badLibrary) {
-            import std.stdio : writeln;
+        import loader = bindbc.loader.sharedlib;
 
-            writeln("WARNING: dsdl expects SDL_image ", wanted.format(), ", but got ", getVersion().format(), ".");
+        string errors;
+        foreach (info; loader.errors) {
+            errors ~= "\n- " ~ info.error.to!string ~ ": " ~ info.message.to!string;
         }
-        else if (current == SDLImageSupport.noLibrary) {
-            throw new SDLException("No SDL2_image library found, especially of version " ~ wanted.format(),
+
+        Version wanted = Version(sdlImageSupport);
+        if (current == SDLImageSupport.noLibrary) {
+            throw new SDLException("No SDL2_image library found, especially of version " ~ wanted.format() ~ errors,
                     __FILE__, __LINE__);
+        }
+        else {
+            throw new SDLException("dsdl expects SDL_image " ~ wanted.format() ~ ", but got " ~ getVersion()
+                    .format() ~ errors, __FILE__, __LINE__);
         }
     }
 }
@@ -112,7 +118,7 @@ version (unittest) {
             dsdl.image.loadSO();
         }
 
-        dsdl.image.init(everything : true);
+        dsdl.image.init(everything: true);
     }
 }
 

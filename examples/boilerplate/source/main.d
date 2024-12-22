@@ -6,7 +6,7 @@ static import dsdl;
 void main() {
     // SDL initialization
     dsdl.loadSO();
-    dsdl.init(everything : true);
+    dsdl.init(everything: true);
 
     // Prints backend information
     writeln("Version of SDL used: ", dsdl.getVersion());

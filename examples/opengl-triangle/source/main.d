@@ -7,7 +7,7 @@ static import dsdl;
 int main() {
     // Initializes SDL2 and OpenGL 3.0
     dsdl.loadSO();
-    dsdl.init(everything : true);
+    dsdl.init(everything: true);
     dsdl.setGLAttribute(dsdl.GLAttribute.contextProfileMask, dsdl.GLProfile.core);
     dsdl.setGLAttribute(dsdl.GLAttribute.contextMajorVersion, 3);
     dsdl.setGLAttribute(dsdl.GLAttribute.contextMinorVersion, 0);

@@ -8,7 +8,7 @@ static import dsdl;
 
 void main() {
     dsdl.loadSO();
-    dsdl.init(everything : true);
+    dsdl.init(everything: true);
 
     // dfmt off
     auto window = new dsdl.Window("Pong",

@@ -40,15 +40,21 @@ else {
             return;
         }
 
-        Version wanted = Version(sdlMixerSupport);
-        if (current == SDLMixerSupport.badLibrary) {
-            import std.stdio : writeln;
+        import loader = bindbc.loader.sharedlib;
 
-            writeln("WARNING: dsdl expects SDL_mixer ", wanted.format(), ", but got ", getVersion().format(), ".");
+        string errors;
+        foreach (info; loader.errors) {
+            errors ~= "\n- " ~ info.error.to!string ~ ": " ~ info.message.to!string;
         }
-        else if (current == SDLMixerSupport.noLibrary) {
-            throw new SDLException("No SDL2_mixer library found, especially of version " ~ wanted.format(),
+
+        Version wanted = Version(sdlMixerSupport);
+        if (current == SDLMixerSupport.noLibrary) {
+            throw new SDLException("No SDL2_mixer library found, especially of version " ~ wanted.format() ~ errors,
                     __FILE__, __LINE__);
+        }
+        else {
+            throw new SDLException("dsdl expects SDL_mixer " ~ wanted.format() ~ ", but got " ~ getVersion()
+                    .format() ~ errors, __FILE__, __LINE__);
         }
     }
 }
@@ -118,7 +124,7 @@ version (unittest) {
             dsdl.mixer.loadSO();
         }
 
-        dsdl.mixer.init(everything : true);
+        dsdl.mixer.init(everything: true);
     }
 }
 
