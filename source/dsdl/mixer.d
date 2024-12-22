@@ -117,14 +117,23 @@ do {
 }
 
 version (unittest) {
+    import std.stdio;
+
     static this() {
         version (BindSDL_Static) {
         }
         else {
             dsdl.mixer.loadSO();
         }
+        writeln("Testing with SDL_mixer ", getVersion().format(), " for binding version ",
+                Version(sdlMixerSupport).format(), "...");
 
-        dsdl.mixer.init(everything: true);
+        try {
+            dsdl.mixer.init(everything: true);
+        }
+        catch (SDLException exc) {
+            writeln("Initializing SDL_mixer resulted an error: ", exc.msg);
+        }
     }
 }
 

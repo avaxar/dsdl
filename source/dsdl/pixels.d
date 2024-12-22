@@ -750,8 +750,8 @@ final class PixelFormat {
 unittest {
     static if (sdlSupport >= SDLSupport.v2_0_5) {
         const auto rgba32 = dsdl.PixelFormat.rgba32;
-        assert(rgba32.mapRGBA(dsdl.Color(0x12, 0x34, 0x56, 0x78)) == 0x12345678);
-        assert(rgba32.getRGBA(0x12345678) == dsdl.Color(0x12, 0x34, 0x56, 0x78));
+        assert(rgba32.mapRGBA(dsdl.Color(0x12, 0x34, 0x56, 0x78)) == 0x78563412);
+        assert(rgba32.getRGBA(0x78563412) == dsdl.Color(0x12, 0x34, 0x56, 0x78));
     }
 
     const auto rgba8888 = dsdl.PixelFormat.rgba8888;

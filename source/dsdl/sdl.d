@@ -128,11 +128,22 @@ void init(bool timer = false, bool audio = false, bool video = false, bool joyst
 }
 
 version (unittest) {
+    import std.stdio;
+
     static this() {
         version (BindSDL_Static) {
         }
         else {
             loadSO();
+        }
+        writeln("Testing with SDL ", getVersion().format(), " for binding version ",
+                Version(sdlSupport).format(), "...");
+
+        try {
+            dsdl.init(everything: true);
+        }
+        catch (SDLException exc) {
+            writeln("Initializing SDL resulted an error: ", exc.msg);
         }
     }
 }

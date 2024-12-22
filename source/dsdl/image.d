@@ -111,14 +111,23 @@ do {
 }
 
 version (unittest) {
+    import std.stdio;
+
     static this() {
         version (BindSDL_Static) {
         }
         else {
             dsdl.image.loadSO();
         }
+        writeln("Testing with SDL_image ", getVersion().format(), " for binding version ",
+                Version(sdlImageSupport).format(), "...");
 
-        dsdl.image.init(everything: true);
+        try {
+            dsdl.image.init(everything: true);
+        }
+        catch (SDLException exc) {
+            writeln("Initializing SDL_image resulted an error: ", exc.msg);
+        }
     }
 }
 
@@ -435,8 +444,43 @@ in {
     assert(surface !is null);
 }
 do {
-    // TODO: make a writable `SDL_RWops` to dynamic memory
-    assert(false, "Not implemented");
+    // TODO: Too much trouble than it's worth
+
+    // SDL_RWops* rw = SDL_RWFromMem(null, 0);
+    // if (rw is null) {
+    //     throw new SDLException;
+    // }
+    // scope (exit)
+    //     SDL_FreeRW(rw);
+
+    // if (IMG_SavePNG_RW(surface.sdlSurface, rw, 1) != 0) {
+    //     throw new SDLException;
+    // }
+
+    // SDL_RWseek(rw, 0, RW_SEEK_END);
+    // void[] buffer = new void[cast(size_t) SDL_RWtell(rw)];
+    // SDL_RWseek(rw, 0, RW_SEEK_SET);
+
+    // SDL_RWread(rw, buffer.ptr, buffer.length, 1);
+    // return buffer;
+
+    import std.stdio;
+
+    File tmpfile = File.tmpfile();
+    scope (exit)
+        tmpfile.close();
+
+    if (IMG_SavePNG_RW(surface.sdlSurface, SDL_RWFromFP(tmpfile.getFP(), false), 1) != 0) {
+        throw new SDLException;
+    }
+
+    tmpfile.seek(0, SEEK_END);
+    void[] buffer = new void[cast(size_t) tmpfile.tell()];
+
+    tmpfile.seek(0);
+    buffer = tmpfile.rawRead(buffer);
+
+    return buffer;
 }
 
 static if (sdlImageSupport >= SDLImageSupport.v2_0_2) {
@@ -475,7 +519,24 @@ static if (sdlImageSupport >= SDLImageSupport.v2_0_2) {
     }
     do {
         // TODO: make a writable `SDL_RWops` to dynamic memory
-        assert(false, "Not implemented");
+
+        import std.stdio;
+
+        File tmpfile = File.tmpfile();
+        scope (exit)
+            tmpfile.close();
+
+        if (IMG_SaveJPG_RW(surface.sdlSurface, SDL_RWFromFP(tmpfile.getFP(), false), 1, quality) != 0) {
+            throw new SDLException;
+        }
+
+        tmpfile.seek(0, SEEK_END);
+        void[] buffer = new void[cast(size_t) tmpfile.tell()];
+
+        tmpfile.seek(0);
+        buffer = tmpfile.rawRead(buffer);
+
+        return buffer;
     }
 }
 

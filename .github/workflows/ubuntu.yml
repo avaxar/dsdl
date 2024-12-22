@@ -58,539 +58,271 @@ jobs:
 
       - name: Build for SDL 2.0.1
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_201" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_201" dub build
-          fi
+          dub build --d-version=SDL_201
 
       - name: Test for SDL 2.0.1
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_201" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_201" dub test
-          fi
+          dub test --d-version=SDL_201
 
       - name: Build for SDL 2.0.2
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_202" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_202" dub build
-          fi
+          dub build --d-version=SDL_202
 
       - name: Test for SDL 2.0.2
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_202" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_202" dub test
-          fi
+          dub test --d-version=SDL_202
 
       - name: Build for SDL 2.0.3
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_203" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_203" dub build
-          fi
+          dub build --d-version=SDL_203
 
       - name: Test for SDL 2.0.3
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_203" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_203" dub test
-          fi
+          dub test --d-version=SDL_203
 
       - name: Build for SDL 2.0.4
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_204" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_204" dub build
-          fi
+          dub build --d-version=SDL_204
 
       - name: Test for SDL 2.0.4
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_204" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_204" dub test
-          fi
+          dub test --d-version=SDL_204
 
       - name: Build for SDL 2.0.5
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_205" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_205" dub build
-          fi
+          dub build --d-version=SDL_205
 
       - name: Test for SDL 2.0.5
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_205" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_205" dub test
-          fi
+          dub test --d-version=SDL_205
 
       - name: Build for SDL 2.0.6
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_206" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_206" dub build
-          fi
+          dub build --d-version=SDL_206
 
       - name: Test for SDL 2.0.6
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_206" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_206" dub test
-          fi
+          dub test --d-version=SDL_206
 
       - name: Build for SDL 2.0.7
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_207" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_207" dub build
-          fi
+          dub build --d-version=SDL_207
 
       - name: Test for SDL 2.0.7
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_207" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_207" dub test
-          fi
+          dub test --d-version=SDL_207
 
       - name: Build for SDL 2.0.8
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_208" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_208" dub build
-          fi
+          dub build --d-version=SDL_208
 
       - name: Test for SDL 2.0.8
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_208" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_208" dub test
-          fi
+          dub test --d-version=SDL_208
 
       - name: Build for SDL 2.0.9
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_209" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_209" dub build
-          fi
+          dub build --d-version=SDL_209
 
       - name: Test for SDL 2.0.9
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_209" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_209" dub test
-          fi
+          dub test --d-version=SDL_209
 
       - name: Build for SDL 2.0.10
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2010" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2010" dub build
-          fi
+          dub build --d-version=SDL_2010
 
       - name: Test for SDL 2.0.10
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2010" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2010" dub test
-          fi
+          dub test --d-version=SDL_2010
 
       - name: Build for SDL 2.0.12
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2012" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2012" dub build
-          fi
+          dub build --d-version=SDL_2012
 
       - name: Test for SDL 2.0.12
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2012" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2012" dub test
-          fi
+          dub test --d-version=SDL_2012
 
       - name: Build for SDL 2.0.14
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2014" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2014" dub build
-          fi
+          dub build --d-version=SDL_2014
 
       - name: Test for SDL 2.0.14
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2014" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2014" dub test
-          fi
+          dub test --d-version=SDL_2014
 
       - name: Build for SDL 2.0.16
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2016" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2016" dub build
-          fi
+          dub build --d-version=SDL_2016
 
       - name: Test for SDL 2.0.16
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2016" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2016" dub test
-          fi
+          dub test --d-version=SDL_2016
 
       - name: Build for SDL 2.0.18
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2018" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2018" dub build
-          fi
+          dub build --d-version=SDL_2018
 
       - name: Test for SDL 2.0.18
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2018" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2018" dub test
-          fi
+          dub test --d-version=SDL_2018
 
       - name: Build for SDL 2.0.20 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020" dub build
-          fi
+          dub build --d-version=SDL_2020
 
       - name: Test for SDL 2.0.20 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020" dub test
-          fi
+          dub test --d-version=SDL_2020
 
       - name: Build for SDL 2.0.22 (Not tested)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2022" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2022" dub build
-          fi
+          dub build --d-version=SDL_2022
 
       - name: Build for SDL 2.24 (Not tested)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_24" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_24" dub build
-          fi
+          dub build --d-version=SDL_2_24
 
       - name: Build for SDL 2.26 (Not tested)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_26" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_26" dub build
-          fi
+          dub build --d-version=SDL_2_26
 
       - name: Build for SDL 2.28 (Not tested)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28" dub build
-          fi
+          dub build --d-version=SDL_2_28
 
       - name: Build for SDL_image 2.0.0
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Image_200" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Image_200" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Image_200
 
       - name: Test for SDL_image 2.0.0
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Image_200" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Image_200" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Image_200
 
       - name: Build for SDL_image 2.0.1
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Image_201" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Image_201" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Image_201
 
       - name: Test for SDL_image 2.0.1
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Image_201" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Image_201" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Image_201
 
       - name: Build for SDL_image 2.0.2
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Image_202" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Image_202" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Image_202
 
       - name: Test for SDL_image 2.0.2
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Image_202" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Image_202" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Image_202
 
       - name: Build for SDL_image 2.0.3
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Image_203" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Image_203" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Image_203
 
       - name: Test for SDL_image 2.0.3
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Image_203" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Image_203" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Image_203
 
       - name: Build for SDL_image 2.0.4
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Image_204" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Image_204" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Image_204
 
       - name: Test for SDL_image 2.0.4
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Image_204" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Image_204" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Image_204
 
       - name: Build for SDL_image 2.0.5 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Image_205" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Image_205" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Image_205
 
       - name: Test for SDL_image 2.0.5 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Image_205" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Image_205" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Image_205
 
       - name: Build for SDL_image 2.6 (Not tested)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Image_2_6" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Image_2_6" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Image_2_6
 
       - name: Build for SDL_mixer 2.0.0
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Mixer_200" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Mixer_200" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_200
 
       - name: Test for SDL_mixer 2.0.0
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Mixer_200" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Mixer_200" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Mixer_200
 
       - name: Build for SDL_mixer 2.0.1
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Mixer_201" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Mixer_201" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_201
 
       - name: Test for SDL_mixer 2.0.1
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Mixer_200" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Mixer_200" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Mixer_201
 
       - name: Build for SDL_mixer 2.0.2
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Mixer_202" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Mixer_202" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_202
 
       - name: Test for SDL_mixer 2.0.2
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Mixer_202" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Mixer_202" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Mixer_202
 
       - name: Build for SDL_mixer 2.0.4 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Mixer_204" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Mixer_204" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_204
 
       - name: Test for SDL_mixer 2.0.4 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_Mixer_204" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_Mixer_204" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_Mixer_204
 
       - name: Build for SDL_mixer 2.6 (Not tested)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_Mixer_2_6" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_Mixer_2_6" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_2_6
 
       - name: Build for SDL_ttf 2.0.12
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_TTF_2012" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_TTF_2012" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2012
 
       - name: Test for SDL_ttf 2.0.12
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_TTF_2012" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_TTF_2012" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_TTF_2012
 
       - name: Build for SDL_ttf 2.0.13
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_TTF_2013" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_TTF_2013" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2013
 
       - name: Test for SDL_ttf 2.0.13
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_TTF_2013" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_TTF_2013" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_TTF_2013
 
       - name: Build for SDL_ttf 2.0.14
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_TTF_2014" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_TTF_2014" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2014
 
       - name: Test for SDL_ttf 2.0.14
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_TTF_2014" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_TTF_2014" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_TTF_2014
 
       - name: Build for SDL_ttf 2.0.15
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_TTF_2015" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_TTF_2015" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2015
 
       - name: Test for SDL_ttf 2.0.15
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_TTF_2015" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_TTF_2015" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_TTF_2015
 
       - name: Build for SDL_ttf 2.0.18 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_TTF_2018" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_TTF_2018" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2018
 
       - name: Test for SDL_ttf 2.0.18 (Maximum version in system)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2020 -version=SDL_TTF_2018" dub test
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2020 --d-version=SDL_TTF_2018" dub test
-          fi
+          dub test --d-version=SDL_2020 --d-version=SDL_TTF_2018
 
       - name: Build for SDL_ttf 2.20 (Not tested)
         run: |
-          if [[ "${{matrix.dc}}" == "dmd-latest" ]]; then
-            DFLAGS="-version=SDL_2_28 -version=SDL_TTF_2_20" dub build
-          elif [[ "${{matrix.dc}}" == "ldc-latest" ]]; then
-            DFLAGS="--d-version=SDL_2_28 --d-version=SDL_TTF_2_20" dub build
-          fi
+          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2_20
 
       - name: Generate ddox
         run: |

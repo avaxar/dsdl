@@ -434,13 +434,14 @@ struct FRect {
             SDL_UnionFRect(&this.sdlFRect, &other.sdlFRect, &union_.sdlFRect);
             return union_;
         }
-    }
-}
-///
-unittest {
-    auto rect1 = dsdl.FRect(-2.0, -2.0, 3.0, 3.0);
-    auto rect2 = dsdl.FRect(-1.0, -1.0, 3.0, 3.0);
 
-    assert(rect1.hasIntersection(rect2));
-    assert(rect1.intersectRect(rect2).get == dsdl.FRect(-1.0, -1.0, 2.0, 2.0));
+        ///
+        unittest {
+            auto rect1 = dsdl.FRect(-2.0, -2.0, 3.0, 3.0);
+            auto rect2 = dsdl.FRect(-1.0, -1.0, 3.0, 3.0);
+
+            assert(rect1.hasIntersection(rect2));
+            assert(rect1.intersectRect(rect2).get == dsdl.FRect(-1.0, -1.0, 2.0, 2.0));
+        }
+    }
 }

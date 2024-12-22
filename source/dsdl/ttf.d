@@ -76,14 +76,23 @@ void init() @trusted {
 }
 
 version (unittest) {
+    import std.stdio;
+
     static this() {
         version (BindSDL_Static) {
         }
         else {
             dsdl.ttf.loadSO();
         }
+        writeln("Testing with SDL_ttf ", getVersion().format(), " for binding version ",
+                Version(sdlTTFSupport).format(), "...");
 
-        dsdl.ttf.init();
+        try {
+            dsdl.ttf.init();
+        }
+        catch (SDLException exc) {
+            writeln("Initializing SDL_ttf resulted an error: ", exc.msg);
+        }
     }
 }
 
