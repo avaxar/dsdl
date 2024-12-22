@@ -192,9 +192,13 @@ jobs:
         run: |
           dub build --d-version=SDL_2_28
 
+      - name: Build for SDL 2.30 (Not tested)
+        run: |
+          dub build --d-version=SDL_2_30
+
       - name: Build for SDL_image 2.0.0
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Image_200
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_200
 
       - name: Test for SDL_image 2.0.0
         run: |
@@ -202,7 +206,7 @@ jobs:
 
       - name: Build for SDL_image 2.0.1
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Image_201
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_201
 
       - name: Test for SDL_image 2.0.1
         run: |
@@ -210,7 +214,7 @@ jobs:
 
       - name: Build for SDL_image 2.0.2
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Image_202
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_202
 
       - name: Test for SDL_image 2.0.2
         run: |
@@ -218,7 +222,7 @@ jobs:
 
       - name: Build for SDL_image 2.0.3
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Image_203
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_203
 
       - name: Test for SDL_image 2.0.3
         run: |
@@ -226,7 +230,7 @@ jobs:
 
       - name: Build for SDL_image 2.0.4
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Image_204
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_204
 
       - name: Test for SDL_image 2.0.4
         run: |
@@ -234,7 +238,7 @@ jobs:
 
       - name: Build for SDL_image 2.0.5 (Maximum version in system)
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Image_205
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_205
 
       - name: Test for SDL_image 2.0.5 (Maximum version in system)
         run: |
@@ -242,11 +246,15 @@ jobs:
 
       - name: Build for SDL_image 2.6 (Not tested)
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Image_2_6
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_2_6
+
+      - name: Build for SDL_image 2.8 (Not tested)
+        run: |
+          dub build --d-version=SDL_2_30 --d-version=SDL_Image_2_8
 
       - name: Build for SDL_mixer 2.0.0
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_200
+          dub build --d-version=SDL_2_30 --d-version=SDL_Mixer_200
 
       - name: Test for SDL_mixer 2.0.0
         run: |
@@ -254,7 +262,7 @@ jobs:
 
       - name: Build for SDL_mixer 2.0.1
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_201
+          dub build --d-version=SDL_2_30 --d-version=SDL_Mixer_201
 
       - name: Test for SDL_mixer 2.0.1
         run: |
@@ -262,7 +270,7 @@ jobs:
 
       - name: Build for SDL_mixer 2.0.2
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_202
+          dub build --d-version=SDL_2_30 --d-version=SDL_Mixer_202
 
       - name: Test for SDL_mixer 2.0.2
         run: |
@@ -270,7 +278,7 @@ jobs:
 
       - name: Build for SDL_mixer 2.0.4 (Maximum version in system)
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_204
+          dub build --d-version=SDL_2_30 --d-version=SDL_Mixer_204
 
       - name: Test for SDL_mixer 2.0.4 (Maximum version in system)
         run: |
@@ -278,11 +286,15 @@ jobs:
 
       - name: Build for SDL_mixer 2.6 (Not tested)
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_Mixer_2_6
+          dub build --d-version=SDL_2_30 --d-version=SDL_Mixer_2_6
+
+      - name: Build for SDL_mixer 2.8 (Not tested)
+        run: |
+          dub build --d-version=SDL_2_30 --d-version=SDL_Mixer_2_8
 
       - name: Build for SDL_ttf 2.0.12
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2012
+          dub build --d-version=SDL_2_30 --d-version=SDL_TTF_2012
 
       - name: Test for SDL_ttf 2.0.12
         run: |
@@ -290,7 +302,7 @@ jobs:
 
       - name: Build for SDL_ttf 2.0.13
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2013
+          dub build --d-version=SDL_2_30 --d-version=SDL_TTF_2013
 
       - name: Test for SDL_ttf 2.0.13
         run: |
@@ -298,7 +310,7 @@ jobs:
 
       - name: Build for SDL_ttf 2.0.14
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2014
+          dub build --d-version=SDL_2_30 --d-version=SDL_TTF_2014
 
       - name: Test for SDL_ttf 2.0.14
         run: |
@@ -306,7 +318,7 @@ jobs:
 
       - name: Build for SDL_ttf 2.0.15
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2015
+          dub build --d-version=SDL_2_30 --d-version=SDL_TTF_2015
 
       - name: Test for SDL_ttf 2.0.15
         run: |
@@ -314,7 +326,7 @@ jobs:
 
       - name: Build for SDL_ttf 2.0.18 (Maximum version in system)
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2018
+          dub build --d-version=SDL_2_30 --d-version=SDL_TTF_2018
 
       - name: Test for SDL_ttf 2.0.18 (Maximum version in system)
         run: |
@@ -322,7 +334,11 @@ jobs:
 
       - name: Build for SDL_ttf 2.20 (Not tested)
         run: |
-          dub build --d-version=SDL_2_28 --d-version=SDL_TTF_2_20
+          dub build --d-version=SDL_2_30 --d-version=SDL_TTF_2_20
+
+      - name: Build for SDL_ttf 2.22 (Not tested)
+        run: |
+          dub build --d-version=SDL_2_30 --d-version=SDL_TTF_2_22
 
       - name: Generate ddox
         run: |
