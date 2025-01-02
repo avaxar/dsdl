@@ -2,7 +2,7 @@
 	"authors": [
 		"Avaxar"
 	],
-	"copyright": "Copyright © 2023, Avaxar",
+	"copyright": "Copyright © 2023-2025, Avaxar",
 	"dependencies": {
 		"dsdl": {
 			"path": "../.."

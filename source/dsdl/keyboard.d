@@ -1,6 +1,6 @@
 /++
- + Authors: Avaxar <avaxar@nekkl.org>
- + Copyright: Copyright © 2023, Avaxar
+ + Authors: Avaxar <me@avaxar.dev>
+ + Copyright: Copyright © 2023-2025, Avaxar
  + License: $(LINK2 https://mit-license.org, MIT License)
  +/
 

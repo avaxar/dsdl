@@ -1,6 +1,6 @@
 /++
- + Authors: Avaxar <avaxar@nekkl.org>
- + Copyright: Copyright © 2023, Avaxar
+ + Authors: Avaxar <me@avaxar.dev>
+ + Copyright: Copyright © 2023-2025, Avaxar
  + License: $(LINK2 https://mit-license.org, MIT License)
  +/
 
@@ -76,9 +76,9 @@ void init() @trusted {
 }
 
 version (unittest) {
-    import std.stdio;
-
     static this() {
+        import std.stdio;
+
         version (BindSDL_Static) {
         }
         else {
