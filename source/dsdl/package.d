@@ -11,8 +11,8 @@
  + This library is actively maintained over on its $(LINK2 https://github.com/avaxar/dsdl, GitHub repository).
  + Voluntary contributions in improving and fixing the library are welcome.
  +
- + Authors: Avaxar <me@avaxar.dev>
- + Copyright: Copyright © 2023-2025, Avaxar
+ + Authors: R. Ethan Halim <me@avaxar.dev>
+ + Copyright: Copyright © 2023-2025, R. Ethan Halim
  + License: $(LINK2 https://mit-license.org, MIT License)
  +/
 

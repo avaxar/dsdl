@@ -1,8 +1,8 @@
 {
 	"authors": [
-		"Avaxar"
+		"R. Ethan Halim"
 	],
-	"copyright": "Copyright © 2023-2025, Avaxar",
+	"copyright": "Copyright © 2023-2025, R. Ethan Halim",
 	"dependencies": {
 		"bindbc-sdl": "~>1.4"
 	},
